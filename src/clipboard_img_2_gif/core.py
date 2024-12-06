@@ -16,6 +16,11 @@ def get_clipboard_image_or_path():
 
 def save_as_gif(image, path):
     """Save the provided image to the specified path in GIF format."""
+    width, height = image.size
+    width_height_size_limit = 500
+    if max(width, height) > width_height_size_limit:
+        scaling = width_height_size_limit / max(width, height)
+        image = image.resize((int(width * scaling), int(height * scaling)))
     image = image.convert("RGB")
     image.save(path, format="GIF")
 
