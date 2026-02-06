@@ -6,18 +6,17 @@ authors = ["tgalpha <tanalpha.zhy@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "clipboard_img_2_gif", from = "src" }]
 
+repository = "https://github.com/tgalpha/clipboard-img-2-gif"
+
 [tool.poetry.dependencies]
 python = "^3.11"
 pillow = "^11.0.0"
 pyperclip = "^1.9.0"
 pywin32 = "^308"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-
 
 [tool.poetry.scripts]
 i2g = "clipboard_img_2_gif.core:main"
